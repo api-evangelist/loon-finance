@@ -1,0 +1,49 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/loon-finance-transparency-openapi.yml + verified live responses 2026-07-20
+summary: >-
+  Entity model for the Loon CADC Transparency API. The domain centres on CADC
+  supply reported across supported blockchains, the on-chain issuance (mint)
+  events that back it, and the independent monthly reserve attestations.
+entities:
+  - name: SupplySnapshot
+    description: A point-in-time view of total and circulating CADC across all chains, with CAD/USD valuation.
+    source: openapi/loon-finance-transparency-openapi.yml#getSupply
+    key_fields: [capturedAt, cadUsdPrice]
+  - name: ChainSupply
+    description: Per-chain CADC supply breakdown (total, minted, burned, frozen, circulating) plus the token contract address.
+    key_fields: [chainId, chainName, cadcAddress]
+  - name: ReserveHolder
+    description: A named reserve holder (custodian ATB Financial, trustee Odyssey) and its CADC token balance.
+    key_fields: [name]
+  - name: Issuance
+    description: A single on-chain CADC mint event.
+    source: openapi/loon-finance-transparency-openapi.yml#listIssuances
+    key_fields: [txHash]
+  - name: Attestation
+    description: An independent monthly reserve attestation report (auditor, attested amount, PDF).
+    source: openapi/loon-finance-transparency-openapi.yml#listAttestations
+    key_fields: [filename]
+relationships:
+  - from: SupplySnapshot
+    to: ChainSupply
+    kind: has_many
+    via: chains
+  - from: SupplySnapshot
+    to: ReserveHolder
+    kind: has_many
+    via: reserves
+  - from: Issuance
+    to: ChainSupply
+    kind: belongs_to
+    via: chainId
+identifiers:
+  - entity: ChainSupply
+    field: chainId
+    note: 'EVM chain ids observed: 1 (ethereum), 137 (polygon), 42161 (arbitrum), 8453 (base), 59144 (linea); Solana has null chainId and a mint address.'
+  - entity: Issuance
+    field: txHash
+    note: On-chain transaction hash.
+  - entity: ChainSupply
+    field: cadcAddress
+    note: CADC ERC-20 contract address (per chain) or Solana mint.

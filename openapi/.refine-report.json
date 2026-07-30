@@ -1,0 +1,18 @@
+{
+  "provider": "loon-finance",
+  "sources": [
+    "loon-finance-attestations-api-openapi.yml",
+    "loon-finance-issuances-api-openapi.yml",
+    "loon-finance-supply-api-openapi.yml"
+  ],
+  "outputs": [
+    "loon-finance-attestations-api-openapi.yml",
+    "loon-finance-issuances-api-openapi.yml",
+    "loon-finance-supply-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

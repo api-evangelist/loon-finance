@@ -1,0 +1,7 @@
+# Loon security disclosure policy. Per RFC 9116.
+Contact: mailto:security@loon.finance
+Contact: https://loon.finance/support-centre
+Expires: 2027-05-26T23:59:59Z
+Preferred-Languages: en
+Canonical: https://loon.finance/.well-known/security.txt
+Policy: https://loon.finance/terms-of-service

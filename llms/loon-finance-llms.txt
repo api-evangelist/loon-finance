@@ -1,0 +1,48 @@
+# Loon and CADC
+
+> CADC is a fiat-backed stablecoin pegged 1:1 to the Canadian dollar. Reserves are held in segregated cash deposits at ATB Financial and attested monthly by an independent auditor. CADC is available on Ethereum, Base, Polygon, Arbitrum, and Solana.
+
+Last updated: 2026-07-12
+
+## Core pages
+
+- [Home](https://loon.finance/): Overview of CADC, live reserve ratio, and trust signals.
+- [Access CADC](https://loon.finance/access-cadc): Where and how to acquire CADC, with live per-chain supply, contract addresses, exchange partners, and cumulative issuance.
+- [Transparency](https://loon.finance/transparency): Live reserve composition, monthly attestation history, and security controls.
+- [Partners](https://loon.finance/cadc-partners): How exchanges, fintechs, payment providers, and DeFi protocols integrate CADC.
+- [Blog](https://loon.finance/blog): Product launches, market commentary, attestation reports.
+- [Support Centre](https://loon.finance/support-centre): Frequently asked questions about CADC.
+
+## Token contracts
+
+- Ethereum (chainId 1): 0xcadc0acd4b445166f12d2c07eac6e2544fbe2eef
+- Base (chainId 8453): 0x043eb4b75d0805c43d7c834902e335621983cf03
+- Polygon (chainId 137): 0x9de41aff9f55219d5bf4359f167d1d0c772a396d
+- Arbitrum (chainId 42161): 0x2b28E826b55e399F4d4699b85f68666AC51e6f70
+- Solana (mint): 9ewjJpmD1ES83RDRFnHs7V2hUdH76WAVjdvu6UV6WNo7
+
+## Live data
+
+- [Supply totals](https://loon.finance/api/supply): JSON. Total + per-chain circulating CADC.
+- [Issuances](https://loon.finance/api/issuances): JSON. Per-chain mint events. Query with `?chainId=` and `?limit=`.
+- [Attestations](https://loon.finance/api/attestations): JSON. Independent monthly reserve attestations with PDF links.
+- [Dune dashboard](https://dune.com/cadc/stablecoin): Community analytics dashboard.
+
+## Most recent attestations
+
+- June 2026: $1,813,742 attested by HDCPA Professional Corporation. Report PDF available at https://loon.finance/transparency.
+- May 2026: $1,760,398 attested by HDCPA Professional Corporation. Report PDF available at https://loon.finance/transparency.
+- April 2026: $1,696,262 attested by HDCPA Professional Corporation. Report PDF available at https://loon.finance/transparency.
+
+## Contact
+
+- Partners: partners@loon.finance
+- Support: support@loon.finance
+- X / Twitter: https://x.com/LoonFinance
+- LinkedIn: https://www.linkedin.com/company/loonfinance/
+
+## Legal
+
+- [Privacy Policy](https://loon.finance/privacy-policy)
+- [Terms of Service](https://loon.finance/terms-of-service)
+- [Blocked Address Policy](https://loon.finance/blocked-address-policy)

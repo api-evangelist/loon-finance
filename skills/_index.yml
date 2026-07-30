@@ -1,0 +1,7 @@
+generated: '2026-07-20'
+method: generated
+skills:
+  - file: loon-finance-check-cadc-reserves.md
+    name: Check CADC supply and reserve backing
+    api: openapi/loon-finance-transparency-openapi.yml
+    operations: [getSupply, listAttestations, listIssuances]

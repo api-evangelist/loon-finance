@@ -1,0 +1,53 @@
+generated: '2026-07-20'
+method: searched
+source: https://loon.finance/llms.txt + verified live responses 2026-07-20
+summary: >-
+  Cross-cutting request/response conventions for the Loon CADC Transparency API.
+  A small, public, read-only JSON API. No authentication, no idempotency contract
+  (all operations are safe GETs), permissive CORS, edge-cached responses, and a
+  simple limit/offset pagination on the issuances endpoint.
+authentication:
+  style: none
+  detail: >-
+    All endpoints are public and unauthenticated. No API key, token, or OAuth is
+    required or documented.
+  see: null
+idempotency:
+  supported: false
+  detail: All operations are read-only HTTP GETs; there is no idempotency-key mechanism.
+pagination:
+  style: limit-offset
+  applies_to:
+    - openapi/loon-finance-transparency-openapi.yml#listIssuances
+  request_params:
+    - name: chainId
+      required: true
+      note: EVM chain id selecting which chain's issuance events to return.
+    - name: limit
+      required: false
+      note: Maximum number of records.
+  response_fields:
+    - pagination.limit
+    - pagination.offset
+    - pagination.orderDirection
+    - count
+  order: descending (newest first), orderDirection defaults to "desc"
+filtering:
+  detail: The issuances endpoint filters by required chainId; supply and attestations take no parameters.
+versioning:
+  style: none-documented
+  detail: No API version segment or version header is present; endpoints live under /api/*.
+error_envelope:
+  format: simple-message
+  shape: '{ "message": "<human-readable reason>" }'
+  detail: Errors (e.g. missing chainId) return a JSON object with a single message field, HTTP 400. Not RFC 9457.
+  see: null
+caching:
+  detail: 'Cloudflare edge cache; Cache-Control: public, max-age=300, stale-while-revalidate=86400.'
+cors:
+  detail: 'Access-Control-Allow-Origin: * on all endpoints.'
+rate_limiting:
+  detail: No rate-limit headers observed; no published rate-limit policy.
+cross_links:
+  data_model: data-model/loon-finance-data-model.yml
+  openapi: openapi/loon-finance-transparency-openapi.yml

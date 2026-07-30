@@ -1,0 +1,14 @@
+{
+  "repo": "loon-finance",
+  "feeds": [
+    {
+      "source": "https://loon.finance/cadc-partners",
+      "feed_url": "https://loon.finance/cadc-partners",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

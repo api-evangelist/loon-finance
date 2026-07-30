@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: loon.finance
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 24 17:59:47 2026 GMT
+  hsts: false
+domains:
+- domain: loon.finance
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: true
+  dmarc_policy: reject

@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://loon.finance/llms.txt + https://loon.finance/transparency
+summary: >-
+  Standards / regulatory conformance for Loon (issuer of CADC). Loon publishes a
+  reserve-transparency program rather than API security standards: the API itself
+  is public and unauthenticated, but the CADC product carries real regulatory and
+  audit posture.
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth2 security scheme; API is public/unauthenticated.
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a simple {message} envelope, not application/problem+json.
+  - id: rfc9116-security-txt
+    conforms: true
+    evidence: https://loon.finance/.well-known/security.txt (Contact, Policy, Expires present)
+  - id: pagination
+    conforms: true
+    evidence: listIssuances exposes limit/offset with orderDirection.
+  - id: fintrac-msb
+    conforms: true
+    evidence: CADC is FINTRAC-compliant; Loon operates under Canadian MSB/AML regime (loon.finance/transparency).
+  - id: reserve-attestation
+    conforms: true
+    evidence: Independent monthly reserve attestations by HDCPA Professional Corporation; reserves custodied at ATB Financial.
+compliance_program:
+  regulator: FINTRAC (Canada)
+  custodian: ATB Financial
+  trustee: Odyssey
+  auditor: HDCPA Professional Corporation
+  attestation_cadence: monthly
+  transparency_page: https://loon.finance/transparency
+  regulatory_filing: Pre-filed prospectus with the Alberta Securities Commission (ASC)
