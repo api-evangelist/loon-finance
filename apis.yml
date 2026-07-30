@@ -1,8 +1,21 @@
 aid: loon-finance
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1
 name: Loon Finance
-description: 'Loon Finance is a company surfaced as a portfolio company of version-one-ventures and added
-  to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Loon is a Calgary-based fintech and the issuer of CADC, a regulated, fiat-backed
+  stablecoin pegged 1:1 to the Canadian dollar. Reserves are held in segregated cash
+  deposits at ATB Financial and attested independently every month by HDCPA
+  Professional Corporation, with FINTRAC compliance and a prospectus pre-filed with
+  the Alberta Securities Commission. CADC is issued on Ethereum, Base, Polygon,
+  Arbitrum, Linea, and Solana, and Loon acquired the token from Paytrie (launched
+  2021, $200M+ in cumulative volume). Loon publishes a small public, unauthenticated
+  Transparency API exposing live circulating supply per chain, on-chain issuance
+  (mint) events, and the monthly reserve-attestation history, backed by an
+  llms.txt, a security.txt disclosure policy, and a public transparency dashboard.
 url: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +23,107 @@ x-backed-by:
 - version-one-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://loon.finance/apple-touch-icon.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Fintech
-apis: []
+- Stablecoin
+- Cryptocurrency
+- Payments
+- Canada
+- Digital Dollar
+- Blockchain
+- Transparency
+apis:
+- aid: loon-finance:loon-finance-attestations-api
+  name: Loon Finance Attestations API
+  description: Independent monthly reserve attestation reports.
+  humanURL: https://loon.finance/llms.txt
+  baseURL: https://loon.finance
+  tags:
+  - Attestations
+  properties:
+  - type: OpenAPI
+    url: openapi/loon-finance-attestations-api-openapi.yml
+- aid: loon-finance:loon-finance-issuances-api
+  name: Loon Finance Issuances API
+  description: On-chain CADC mint events per chain.
+  humanURL: https://loon.finance/llms.txt
+  baseURL: https://loon.finance
+  tags:
+  - Issuances
+  properties:
+  - type: OpenAPI
+    url: openapi/loon-finance-issuances-api-openapi.yml
+- aid: loon-finance:loon-finance-supply-api
+  name: Loon Finance Supply API
+  description: Circulating and total CADC supply, overall and per chain.
+  humanURL: https://loon.finance/llms.txt
+  baseURL: https://loon.finance
+  tags:
+  - Supply
+  properties:
+  - type: OpenAPI
+    url: openapi/loon-finance-supply-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: AgenticAccess
+  url: agentic-access/loon-finance-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/loon-finance-vulnerability-disclosure.yml
+- type: Security
+  url: https://loon.finance/.well-known/security.txt
+- type: DomainSecurity
+  url: security/loon-finance-domain-security.yml
+- type: Website
+  url: https://loon.finance/
+- type: Documentation
+  url: https://loon.finance/cadc-partners
+- type: Blog
+  url: https://loon.finance/blog
+- type: Support
+  url: https://loon.finance/support-centre
+- type: TermsOfService
+  url: https://loon.finance/terms-of-service
+- type: PrivacyPolicy
+  url: https://loon.finance/privacy-policy
+- type: Twitter
+  url: https://x.com/LoonFinance
+- type: LinkedIn
+  url: https://www.linkedin.com/company/loonfinance/
+- type: LLMsTxt
+  url: llms/loon-finance-llms.txt
+- type: WellKnown
+  url: well-known/loon-finance-well-known.yml
+- type: SecurityTxt
+  url: well-known/loon-finance-security.txt
+- type: MCPServer
+  url: mcp/loon-finance-mcp.yml
+- type: Conventions
+  url: conventions/loon-finance-conventions.yml
+- type: DataModel
+  url: data-model/loon-finance-data-model.yml
+- type: Conformance
+  url: conformance/loon-finance-conformance.yml
+- type: Compliance
+  url: https://loon.finance/transparency
+- type: AgentSkill
+  url: skills/_index.yml
