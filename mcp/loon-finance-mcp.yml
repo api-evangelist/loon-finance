@@ -2,20 +2,25 @@ generated: '2026-07-20'
 method: derived
 status: candidate
 source: openapi/loon-finance-transparency-openapi.yml
-note: >-
-  No official hosted/remote MCP server was found for Loon/CADC (searched docs, the
-  MCP registry, and npm). This is a candidate tool list derived one-to-one from the
-  public Transparency API operations, offered as a starting point.
+note: No official hosted/remote MCP server was found for Loon/CADC (searched docs, the MCP registry, and
+  npm). This is a candidate tool list derived one-to-one from the public Transparency API operations,
+  offered as a starting point.
 server:
   name: loon-finance
   transport: http
 tools:
-  - name: get_supply
-    description: Get total and per-chain circulating CADC supply with CAD/USD valuation.
-    source_operation: openapi/loon-finance-transparency-openapi.yml#getSupply
-  - name: list_issuances
-    description: List on-chain CADC mint events for a given chainId (newest first).
-    source_operation: openapi/loon-finance-transparency-openapi.yml#listIssuances
-  - name: list_attestations
-    description: List independent monthly reserve attestation reports with PDF links.
-    source_operation: openapi/loon-finance-transparency-openapi.yml#listAttestations
+- name: get_supply
+  description: Get total and per-chain circulating CADC supply with CAD/USD valuation.
+  source_operation: openapi/loon-finance-transparency-openapi.yml#getSupply
+- name: list_issuances
+  description: List on-chain CADC mint events for a given chainId (newest first).
+  source_operation: openapi/loon-finance-transparency-openapi.yml#listIssuances
+- name: list_attestations
+  description: List independent monthly reserve attestation reports with PDF links.
+  source_operation: openapi/loon-finance-transparency-openapi.yml#listAttestations
+deployment:
+  mode: none
+  verified: derived
+  tools: 3
+  checked: '2026-08-12'
+  source: catalog MCP census

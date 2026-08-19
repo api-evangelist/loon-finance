@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loon CADC Transparency Attestations Issuances API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Issuances",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List CADC issuance (mint) events for a chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://loon.finance/api/issuances",
+            "params": [
+              {
+                "name": "chainId",
+                "value": "",
+                "type": "query",
+                "description": "EVM chain id (e.g. 1 Ethereum, 8453 Base, 137 Polygon, 42161 Arbitrum, 59144 Linea)."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of issuance events to return."
+              }
+            ]
+          },
+          "docs": "Returns recent on-chain CADC mint events for a single chain, newest first. The chainId query parameter is required."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

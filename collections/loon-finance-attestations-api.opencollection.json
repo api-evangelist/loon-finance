@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loon CADC Transparency Attestations API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Attestations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List monthly reserve attestations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://loon.finance/api/attestations"
+          },
+          "docs": "Returns the history of independent monthly reserve attestation reports, each with the attested CAD amount, the auditor, an upload timestamp, and a (time-limited signed) URL to the attestation PDF."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

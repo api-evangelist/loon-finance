@@ -1,0 +1,171 @@
+{
+  "item": [
+    {
+      "id": "b5ee5c15-bc15-4ece-a341-86f096a5cff1",
+      "name": "Issuances",
+      "description": {
+        "content": "On-chain CADC mint events per chain.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "59625d80-50a2-441a-8b54-5892a5fe2b43",
+          "name": "List CADC issuance (mint) events for a chain",
+          "request": {
+            "name": "List CADC issuance (mint) events for a chain",
+            "description": {
+              "content": "Returns recent on-chain CADC mint events for a single chain, newest first. The chainId query parameter is required.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "issuances"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "chainId",
+                  "value": "<integer>",
+                  "description": "(Required) EVM chain id (e.g. 1 Ethereum, 8453 Base, 137 Polygon, 42161 Arbitrum, 59144 Linea)."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of issuance events to return."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "663a52cd-8221-4e89-a108-37936a74d91f",
+              "name": "Issuance events for the chain.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "issuances"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"chainId\": 4402,\n  \"count\": 8150,\n  \"pagination\": {\n    \"limit\": 1031,\n    \"offset\": 5149,\n    \"orderDirection\": \"desc\"\n  },\n  \"issuances\": [\n    {\n      \"txHash\": \"string\",\n      \"blockNumber\": \"string\",\n      \"issuedAt\": \"1989-07-04T03:13:29.808Z\",\n      \"minter\": \"string\",\n      \"to\": \"string\",\n      \"amountCadc\": \"string\"\n    },\n    {\n      \"txHash\": \"string\",\n      \"blockNumber\": \"string\",\n      \"issuedAt\": \"2017-10-15T22:58:29.682Z\",\n      \"minter\": \"string\",\n      \"to\": \"string\",\n      \"amountCadc\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f167b943-353c-4f7a-a4e6-e1b3f62d5cbc",
+              "name": "Missing or invalid chainId query parameter.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "issuances"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "chainId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://loon.finance",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9e02ed8d-b4a1-4fa6-8708-323a12706f84",
+    "name": "Loon CADC Transparency Attestations Issuances API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public, read-only transparency API for CADC, the Canadian-dollar stablecoin issued by Loon. Exposes live circulating supply (total and per-chain), on-chain mint (issuance) events per chain, and the history of independent monthly reserve attestations. No authentication is required; responses are JSON with permissive CORS (Access-Control-Allow-Origin: *) and are cached at the edge (Cloudflare, max-age 300s). This specification was generated by the API Evangelist enrichment pipeline from the endpoints documented in https://loon.finance/llms.txt and the verified live JSON responses on 2026-07-20; it is not published by Loon.\n\nContact Support:\n Name: Loon Support\n Email: support@loon.finance",
+      "type": "text/plain"
+    }
+  }
+}

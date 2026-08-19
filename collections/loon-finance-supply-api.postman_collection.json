@@ -1,0 +1,104 @@
+{
+  "item": [
+    {
+      "id": "a07ff14f-40f6-491a-979e-f9ebf206a474",
+      "name": "Supply",
+      "description": {
+        "content": "Circulating and total CADC supply, overall and per chain.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cd56f0fe-1e1d-47c7-8e19-6b503cd419d2",
+          "name": "Get CADC supply totals",
+          "request": {
+            "name": "Get CADC supply totals",
+            "description": {
+              "content": "Returns total and circulating CADC supply across all supported chains, the current CAD/USD price used for nominal valuation, reserve holder balances, and a per-chain breakdown.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "supply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a45570fe-63f3-48d7-bd44-140cc5452d83",
+              "name": "Supply snapshot.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"capturedAt\": \"1962-12-23T21:05:18.975Z\",\n  \"cadUsdPrice\": \"string\",\n  \"cadUsdPriceUpdatedAt\": \"2005-10-06T13:01:13.593Z\",\n  \"cadUsdPriceSource\": \"pyth\",\n  \"totals\": {\n    \"totalSupplyCadc\": \"string\",\n    \"nominalValueCad\": \"string\",\n    \"nominalValueUsd\": \"string\",\n    \"issuerHeldCadc\": \"string\",\n    \"custodianHeldCadc\": \"string\",\n    \"trusteeHeldCadc\": \"string\",\n    \"bridgeHeldCadc\": \"string\",\n    \"frozenCadc\": \"string\",\n    \"circulatingCadc\": \"string\",\n    \"circulatingNominalCad\": \"string\",\n    \"circulatingNominalUsd\": \"string\"\n  },\n  \"reserves\": {\n    \"custodian\": {\n      \"name\": \"string\",\n      \"cadcTokenBalance\": \"string\"\n    },\n    \"trustee\": {\n      \"name\": \"string\",\n      \"cadcTokenBalance\": \"string\"\n    }\n  },\n  \"chains\": [\n    {\n      \"chainId\": 6085,\n      \"chainName\": \"string\",\n      \"cadcAddress\": \"string\",\n      \"totalSupplyCadc\": \"string\",\n      \"totalMintedCadc\": \"string\",\n      \"totalBurnedCadc\": \"string\",\n      \"nominalValueCad\": \"string\",\n      \"nominalValueUsd\": \"string\",\n      \"issuerHeldCadc\": \"string\",\n      \"bridgeHeldCadc\": \"string\",\n      \"frozenCadc\": \"string\",\n      \"circulatingCadc\": \"string\",\n      \"circulatingNominalCad\": \"string\",\n      \"circulatingNominalUsd\": \"string\"\n    },\n    {\n      \"chainId\": 9373,\n      \"chainName\": \"string\",\n      \"cadcAddress\": \"string\",\n      \"totalSupplyCadc\": \"string\",\n      \"totalMintedCadc\": \"string\",\n      \"totalBurnedCadc\": \"string\",\n      \"nominalValueCad\": \"string\",\n      \"nominalValueUsd\": \"string\",\n      \"issuerHeldCadc\": \"string\",\n      \"bridgeHeldCadc\": \"string\",\n      \"frozenCadc\": \"string\",\n      \"circulatingCadc\": \"string\",\n      \"circulatingNominalCad\": \"string\",\n      \"circulatingNominalUsd\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://loon.finance",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6a38fe14-8698-461a-accd-e0d0f25c49a8",
+    "name": "Loon CADC Transparency Attestations Supply API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public, read-only transparency API for CADC, the Canadian-dollar stablecoin issued by Loon. Exposes live circulating supply (total and per-chain), on-chain mint (issuance) events per chain, and the history of independent monthly reserve attestations. No authentication is required; responses are JSON with permissive CORS (Access-Control-Allow-Origin: *) and are cached at the edge (Cloudflare, max-age 300s). This specification was generated by the API Evangelist enrichment pipeline from the endpoints documented in https://loon.finance/llms.txt and the verified live JSON responses on 2026-07-20; it is not published by Loon.\n\nContact Support:\n Name: Loon Support\n Email: support@loon.finance",
+      "type": "text/plain"
+    }
+  }
+}
