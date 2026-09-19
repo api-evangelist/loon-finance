@@ -77,6 +77,8 @@ apis:
   humanURL: https://loon.finance/llms.txt
   baseURL: https://loon.finance
   tags:
+  - Attestation
+  tags_raw:
   - Attestations
   properties:
   - type: OpenAPI
