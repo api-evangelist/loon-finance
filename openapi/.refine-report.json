@@ -1,9 +1,7 @@
 {
   "provider": "loon-finance",
   "sources": [
-    "loon-finance-attestations-api-openapi.yml",
-    "loon-finance-issuances-api-openapi.yml",
-    "loon-finance-supply-api-openapi.yml"
+    "_original/loon-finance-transparency-openapi.yml"
   ],
   "outputs": [
     "loon-finance-attestations-api-openapi.yml",
@@ -13,6 +11,14 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "loon-finance-transparency-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "loon-finance-attestations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "loon-finance-issuances-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "loon-finance-supply-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
