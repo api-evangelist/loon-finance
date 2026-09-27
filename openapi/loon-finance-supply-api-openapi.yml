@@ -36,6 +36,40 @@ paths:
                 $ref: '#/components/schemas/SupplyResponse'
 components:
   schemas:
+    SupplyResponse:
+      type: object
+      properties:
+        capturedAt:
+          type: string
+          format: date-time
+        cadUsdPrice:
+          type: string
+        cadUsdPriceUpdatedAt:
+          type: string
+          format: date-time
+        cadUsdPriceSource:
+          type: string
+          example: pyth
+        totals:
+          $ref: '#/components/schemas/SupplyTotals'
+        reserves:
+          type: object
+          properties:
+            custodian:
+              $ref: '#/components/schemas/ReserveHolder'
+            trustee:
+              $ref: '#/components/schemas/ReserveHolder'
+        chains:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChainSupply'
+    ReserveHolder:
+      type: object
+      properties:
+        name:
+          type: string
+        cadcTokenBalance:
+          type: string
     SupplyTotals:
       type: object
       properties:
@@ -94,37 +128,3 @@ components:
           type: string
         circulatingNominalUsd:
           type: string
-    ReserveHolder:
-      type: object
-      properties:
-        name:
-          type: string
-        cadcTokenBalance:
-          type: string
-    SupplyResponse:
-      type: object
-      properties:
-        capturedAt:
-          type: string
-          format: date-time
-        cadUsdPrice:
-          type: string
-        cadUsdPriceUpdatedAt:
-          type: string
-          format: date-time
-        cadUsdPriceSource:
-          type: string
-          example: pyth
-        totals:
-          $ref: '#/components/schemas/SupplyTotals'
-        reserves:
-          type: object
-          properties:
-            custodian:
-              $ref: '#/components/schemas/ReserveHolder'
-            trustee:
-              $ref: '#/components/schemas/ReserveHolder'
-        chains:
-          type: array
-          items:
-            $ref: '#/components/schemas/ChainSupply'

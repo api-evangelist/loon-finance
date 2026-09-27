@@ -60,6 +60,7 @@ tags:
 - Digital Dollar
 - Blockchain
 - Transparency
+- Stablecoin Issuance
 tags_raw:
 - Company
 - Fintech
@@ -70,12 +71,12 @@ tags_raw:
 - Digital Dollar
 - Blockchain
 - Transparency
+- Stablecoin Issuance
 apis:
 - aid: loon-finance:loon-finance-attestations-api
   name: Loon Finance Attestations API
   description: Independent monthly reserve attestation reports.
   humanURL: https://loon.finance/llms.txt
-  baseURL: https://loon.finance
   tags:
   - Attestation
   tags_raw:
@@ -87,7 +88,6 @@ apis:
   name: Loon Finance Issuances API
   description: On-chain CADC mint events per chain.
   humanURL: https://loon.finance/llms.txt
-  baseURL: https://loon.finance
   tags:
   - Issuances
   properties:
@@ -97,7 +97,6 @@ apis:
   name: Loon Finance Supply API
   description: Circulating and total CADC supply, overall and per chain.
   humanURL: https://loon.finance/llms.txt
-  baseURL: https://loon.finance
   tags:
   - Supply
   properties:
