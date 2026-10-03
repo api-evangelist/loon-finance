@@ -55,16 +55,11 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    Pagination:
+    ErrorMessage:
       type: object
       properties:
-        limit:
-          type: integer
-        offset:
-          type: integer
-        orderDirection:
+        message:
           type: string
-          example: desc
     IssuancesResponse:
       type: object
       properties:
@@ -78,11 +73,16 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Issuance'
-    ErrorMessage:
+    Pagination:
       type: object
       properties:
-        message:
+        limit:
+          type: integer
+        offset:
+          type: integer
+        orderDirection:
           type: string
+          example: desc
     Issuance:
       type: object
       properties:

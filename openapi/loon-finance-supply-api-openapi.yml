@@ -63,13 +63,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ChainSupply'
-    ReserveHolder:
-      type: object
-      properties:
-        name:
-          type: string
-        cadcTokenBalance:
-          type: string
     SupplyTotals:
       type: object
       properties:
@@ -127,4 +120,11 @@ components:
         circulatingNominalCad:
           type: string
         circulatingNominalUsd:
+          type: string
+    ReserveHolder:
+      type: object
+      properties:
+        name:
+          type: string
+        cadcTokenBalance:
           type: string
