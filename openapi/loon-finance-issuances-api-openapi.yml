@@ -60,29 +60,6 @@ components:
       properties:
         message:
           type: string
-    IssuancesResponse:
-      type: object
-      properties:
-        chainId:
-          type: integer
-        count:
-          type: integer
-        pagination:
-          $ref: '#/components/schemas/Pagination'
-        issuances:
-          type: array
-          items:
-            $ref: '#/components/schemas/Issuance'
-    Pagination:
-      type: object
-      properties:
-        limit:
-          type: integer
-        offset:
-          type: integer
-        orderDirection:
-          type: string
-          example: desc
     Issuance:
       type: object
       properties:
@@ -99,3 +76,26 @@ components:
           type: string
         amountCadc:
           type: string
+    Pagination:
+      type: object
+      properties:
+        limit:
+          type: integer
+        offset:
+          type: integer
+        orderDirection:
+          type: string
+          example: desc
+    IssuancesResponse:
+      type: object
+      properties:
+        chainId:
+          type: integer
+        count:
+          type: integer
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        issuances:
+          type: array
+          items:
+            $ref: '#/components/schemas/Issuance'

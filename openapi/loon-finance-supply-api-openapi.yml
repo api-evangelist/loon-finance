@@ -36,6 +36,39 @@ paths:
                 $ref: '#/components/schemas/SupplyResponse'
 components:
   schemas:
+    ChainSupply:
+      type: object
+      properties:
+        chainId:
+          type:
+          - integer
+          - 'null'
+        chainName:
+          type: string
+        cadcAddress:
+          type: string
+        totalSupplyCadc:
+          type: string
+        totalMintedCadc:
+          type: string
+        totalBurnedCadc:
+          type: string
+        nominalValueCad:
+          type: string
+        nominalValueUsd:
+          type: string
+        issuerHeldCadc:
+          type: string
+        bridgeHeldCadc:
+          type: string
+        frozenCadc:
+          type: string
+        circulatingCadc:
+          type: string
+        circulatingNominalCad:
+          type: string
+        circulatingNominalUsd:
+          type: string
     SupplyResponse:
       type: object
       properties:
@@ -77,39 +110,6 @@ components:
         custodianHeldCadc:
           type: string
         trusteeHeldCadc:
-          type: string
-        bridgeHeldCadc:
-          type: string
-        frozenCadc:
-          type: string
-        circulatingCadc:
-          type: string
-        circulatingNominalCad:
-          type: string
-        circulatingNominalUsd:
-          type: string
-    ChainSupply:
-      type: object
-      properties:
-        chainId:
-          type:
-          - integer
-          - 'null'
-        chainName:
-          type: string
-        cadcAddress:
-          type: string
-        totalSupplyCadc:
-          type: string
-        totalMintedCadc:
-          type: string
-        totalBurnedCadc:
-          type: string
-        nominalValueCad:
-          type: string
-        nominalValueUsd:
-          type: string
-        issuerHeldCadc:
           type: string
         bridgeHeldCadc:
           type: string
