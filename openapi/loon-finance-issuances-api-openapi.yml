@@ -55,6 +55,19 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
+    IssuancesResponse:
+      type: object
+      properties:
+        chainId:
+          type: integer
+        count:
+          type: integer
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        issuances:
+          type: array
+          items:
+            $ref: '#/components/schemas/Issuance'
     ErrorMessage:
       type: object
       properties:
@@ -86,16 +99,3 @@ components:
         orderDirection:
           type: string
           example: desc
-    IssuancesResponse:
-      type: object
-      properties:
-        chainId:
-          type: integer
-        count:
-          type: integer
-        pagination:
-          $ref: '#/components/schemas/Pagination'
-        issuances:
-          type: array
-          items:
-            $ref: '#/components/schemas/Issuance'
