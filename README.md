@@ -64,6 +64,121 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Loon Finance is a company surfaced as a portfolio company of version-one-ventures and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment pipeline.
+Loon is a Calgary-based fintech and the issuer of CADC, a regulated, fiat-backed stablecoin pegged 1:1 to the Canadian dollar. Reserves are held in segregated cash deposits at ATB Financial and attested independently every month by HDCPA Professional Corporation, with FINTRAC compliance and a prospectus pre-filed with the Alberta Securities Commission. CADC is issued on Ethereum, Base, Polygon, Arbitrum, Linea, and Solana, and Loon acquired the token from Paytrie (launched 2021, $200M+ in cumulative volume). Loon publishes a small public, unauthenticated Transparency API exposing live circulating supply per chain, on-chain issuance (mint) events, and the monthly reserve-attestation history, backed by an llms.txt, a security.txt disclosure policy, and a public transparency dashboard.
 
-Backed by: version-one-ventures
+**Areas:** Company · Fintech · Stablecoins · Cryptocurrency · Payments · Canada · Digital Dollar · Blockchain · Transparency · Stablecoin Issuance
+
+## Loon Finance on APIs.io
+
+Everything profiled for Loon Finance is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/loon-finance/](https://apis.io/providers/loon-finance/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Loon Finance Attestations API](https://apis.io/apis/loon-finance/loon-finance-attestations-api/) — Independent monthly reserve attestation reports.
+- [Loon Finance Issuances API](https://apis.io/apis/loon-finance/loon-finance-issuances-api/) — On-chain CADC mint events per chain.
+- [Loon Finance Supply API](https://apis.io/apis/loon-finance/loon-finance-supply-api/) — Circulating and total CADC supply, overall and per chain.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [loon-finance](https://apis.io/servers/loon-finance/loon-finance/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Loon Finance Agentic Access](https://apis.io/agentic-access/loon-finance/loon-finance-agentic-access/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Loon CADC Transparency Attestations API](https://apis.io/collections/loon-finance/open-loon-finance-attestations-api/)
+- [Loon CADC Transparency Attestations Issuances API](https://apis.io/collections/loon-finance/open-loon-finance-issuances-api/)
+- [Loon CADC Transparency Attestations Supply API](https://apis.io/collections/loon-finance/open-loon-finance-supply-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Loon Finance Transparency Overlay](https://apis.io/overlays/loon-finance/loon-finance-transparency-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Loon Finance Domain Security](https://apis.io/security/loon-finance/loon-finance-domain-security/)
+- [Loon Finance Vulnerability Disclosure](https://apis.io/security/loon-finance/loon-finance-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://loon.finance/)
+- [Documentation](https://loon.finance/cadc-partners)
+- [Support](https://loon.finance/support-centre)
+- [Blog](https://loon.finance/blog)
+- [Security](https://loon.finance/.well-known/security.txt)
+- [Compliance](https://loon.finance/transparency)
+- [Terms of service](https://loon.finance/terms-of-service)
+- [Privacy policy](https://loon.finance/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 41.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 45.5 |
+| Contract governance | 18.2 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 18.5 |
+| Access clarity | 78.6 |
+
+**Agent readiness 17.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 26.8** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/loon-finance/](https://apis.io/providers/loon-finance/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Loon Finance: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/loon-finance/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
